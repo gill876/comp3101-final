@@ -1,6 +1,6 @@
 """I/O System Game"""
 import pygame
-import constants
+import src.constants as constants
 
 
 # Intialize the pygame
