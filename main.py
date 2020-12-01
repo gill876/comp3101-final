@@ -345,7 +345,7 @@ def ProcessBackIo(counter,spinner):
 running = True
 countOps=0
 spinner = 0
-messagebox.showinfo('View','Use Left or Right Directional to Navigate')
+messagebox.showinfo('View','Use Left or Right Directional Keys to Navigate the Process cycle')
 while running:
     
     screen.fill(BACKGROUND_COLOR)
