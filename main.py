@@ -68,6 +68,29 @@ BACKGROUND_POSITION = (0, 0)
 BACKGROUND_COLOR = (255, 255, 255)
 # create the screen
 screen = pygame.display.set_mode(WINDOW_RESOLUTION)
+def startscreen():
+    black=(78,84,209)
+
+    end_it=False
+    screentext=["Welcome Start Screen","CLICK ANYWHERE ON THIS SCREEN TO BEGIN"]
+    while (end_it==False):
+        screen.fill(black)
+        myfont=pygame.font.SysFont("Britannic Bold", 50)
+        myfont1=pygame.font.SysFont("Britannic Bold", 90)
+        firstlabel=myfont1.render("Learn More About", 1, (255, 255, 255))
+        secondlabel=myfont1.render("I/O Process Calls", 1, (255, 255, 255))
+        thirdlabel=myfont.render("CLICK ANYWHERE ON THIS SCREEN TO BEGIN", 1, (255, 255, 255))
+
+        for event in pygame.event.get():
+            if event.type==MOUSEBUTTONDOWN:
+                end_it=True
+        screen.blit(firstlabel,(400,300))
+        screen.blit(secondlabel,(400,400))
+        screen.blit(thirdlabel,(300,600))
+
+
+        pygame.display.flip()
+startscreen()
 
 # Caption and Icon
 pygame.display.set_caption(WINDOW_NAME)
@@ -362,7 +385,7 @@ while running:
 
     ProcessThroughIo(countOps,spinner)
     spinner+=5
-    
+
     ProcessBackIo(countOps,spinner)
    
     if(countOps<=0):
